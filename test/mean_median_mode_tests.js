@@ -9,12 +9,12 @@ describe('Mean', function() {
 
 describe('Median', function() {
   it('gets an accurate median', function() {
-    expecct(mmm.median(4,5,6)).to.eql(5);
+    expect(mmm.median([4,5,6])).to.eql(5);
   });
 });
 
 describe('Mode', function() {
   it('gets an accurae mode', function() {
-    expect(mmm.mode(5,5,6,7)).to.eql(5);
+    expect(mmm.mode([5,5,6,7])).to.eql([5]);
   });
 })

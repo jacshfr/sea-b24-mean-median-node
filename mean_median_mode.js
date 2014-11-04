@@ -1,5 +1,3 @@
-'use strict';
-
 var MeanMedianMode = function() {
 
   this.mean = function(array) { //average of all nums

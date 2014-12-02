@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+  </head>
+  <body>
+    <h1>Mean, Median, Mode</h1>
+    <div data-ng-app="mmmApp">
+      <div data-ng-controller="mmmCtrl">
+        <input type="text" data-ng-model="rawNums.nums"/>
+        <button data-ng-click="findMMM()">Find MMM</button>
+          <h2>Mean</h2>
+          <p>{{mmm.mean}}</p>
+          <h2>Median</h2>
+          <p>{{mmm.median}}</p>
+          <h2>Mode</h2>
+          <p>{{mmm.mode}}</p>
+      </div>
+    </div>
+    <script src="client_bundle.js"></script>
+  </body>
+</html>

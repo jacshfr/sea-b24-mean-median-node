@@ -9,7 +9,7 @@ require('../../server');
 
 describe('MeanMedianMode', function() {
 
-  it('gets an accurate mean median and mode', function(done) {
+  it('route gets accurate mean median and mode', function(done) {
     chai.request('http://localhost:5000')
     .post('/mmm')
     .send({nums: '5,5,6,6,7'})

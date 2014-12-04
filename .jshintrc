@@ -9,8 +9,10 @@
     "beforeEach" : false,
     "after"      : false,
     "afterEach"  : false,
-    "equal"      : false
+    "equal"      : false,
+    "angular"    : false
   },
+
   "globalstrict": true,
   "quotmark": false,
   "smarttabs": true,

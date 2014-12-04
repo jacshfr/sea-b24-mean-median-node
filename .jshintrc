@@ -12,6 +12,7 @@
     "equal"      : false,
     "angular"    : false
   },
+
   "globalstrict": true,
   "quotmark": false,
   "smarttabs": true,

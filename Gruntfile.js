@@ -7,7 +7,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-browserify');
-  grunt.loadNpmTasks('grunt-Karma');
+  grunt.loadNpmTasks('grunt-karma');
 
   grunt.initConfig({
     jshint: {

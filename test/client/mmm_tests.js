@@ -20,28 +20,18 @@ describe('MmmController', function() {
     expect(typeof mmmController).toBe('object');
   });
 
-  describe('rest request', function() {
-    beforeEach(angular.mock.inject(function(_$httpBackend_) {
-      $httpBackend = _$httpBackend_;
-    }));
-
-    afterEach(function() {
-      $httpBackend.verifyNoOutstandingExpectation();
-      $httpBackend.verifyNoOutstandingRequest();
-    });
-
-    it('should make a post to /mmm', function() {
-      $httpBackend.expectPOST('/mmm').respond(200, {'mean': 2, 'median': 3, 'mode': [1, 2, 3]});
+  describe('main mmm functionality', function() {
+    it('should get mean, median, and mode', function() {
 
       $controllerConstructor('mmmCtrl', {$scope: $scope});
-      $scope.rawNums = {};
-      $scope.rawNums.nums = '123';
-      $scope.findMMM();
-
-      $httpBackend.flush();
-
+      var testArray = ['1', '2', '3'];
+      for (var i = 0; i < testArray.length; i++) {
+        $scope.rawNums = {};
+        $scope.rawNums.nums = testArray[i];
+        $scope.findMMM();
+      }
       expect($scope.mmm.mean).toBe(2);
-      expect($scope.mmm.median).toBe(3);
+      expect($scope.mmm.median).toBe(2);
       expect($scope.mmm.mode).toEqual([1, 2, 3]);
     });
   });

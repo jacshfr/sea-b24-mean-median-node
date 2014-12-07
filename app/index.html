@@ -8,8 +8,8 @@
     <h1>Mean, Median, Mode</h1>
     <div data-ng-app="mmmApp">
       <div data-ng-controller="mmmCtrl">
-        <input type="text" data-ng-model="rawNums.nums" data-ng-change="findMMM()"/>
-          <p>{{rawNums.nums}}</p>
+        <input type="text" data-ng-model="rawNums.nums" data-ng-blur="findMMM()"/>
+          <p>{{raw}}</p>
           <h2>Mean</h2>
           <p>{{mmm.mean}}</p>
           <h2>Median</h2>

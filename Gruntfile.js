@@ -66,12 +66,12 @@ module.exports = function(grunt) {
       continuous: {
         configFile: 'karma.config.js',
         singleRun: false,
-        browsers: ['PhantomJS', 'Chrome', 'Safari', 'Firefox']
+        browsers: ['PhantomJS']
       }
     }
   });
   grunt.registerTask('test:client', ['browserify:test', 'karma:unit']);
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha', 'test:client']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'test:client']);
   grunt.registerTask('default', ['test']);
   grunt.registerTask('build', ['jshint', 'jscs', 'clean', 'browserify:dev', 'copy:dev']);
 };
